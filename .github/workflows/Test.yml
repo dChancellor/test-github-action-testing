@@ -8,6 +8,8 @@ jobs:
   test:
     name: Testing code before deployment
     runs-on: ubuntu-latest
+    env:
+      SECRET_NUMBER: ${{secrets.SECRET_NUMBER}}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
